@@ -11,7 +11,7 @@ def getHum(DHT_PIN):
         return 'FAILED '
 
 def getHumString(DHT_PIN):
-    return 'Humidity = ' + str(humidity) + '%'
+    return 'Humidity = ' + str(getHum(DHT_PIN)) + '%'
 
 def getTemp(DHT_PIN):
     temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)[1]
